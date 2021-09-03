@@ -79,6 +79,7 @@
                 
                 // Attempt to execute the prepared statement
                 if($stmt->execute()){
+                    
                     // Redirect to login page
                     header("location: login.php");
                 } else{
