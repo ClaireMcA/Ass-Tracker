@@ -1,4 +1,8 @@
-<?php include "templates/header.php"; ?>
+<?php 
+    include "login-check.php";
+    include "templates/header.php"; 
+
+?>
 
 
 
@@ -11,8 +15,5 @@
     </div>
 </div>
 
-<?php echo "<h1>Hello</h1>" ?>
-
-<?php require "events.php" ?>
 
 <?php include "templates/footer.php"; ?>

@@ -42,7 +42,8 @@
         
         echo ("{
                 title: '" . $row['subjectname'] . ": " . $row['assignmentname'] . "',
-                start: '" . $row['duedate'] . "'
+                start: '" . $row['duedate'] . "',
+                url: 'event-page.php?id=" . $row['id'] . "'
             },");
     
 

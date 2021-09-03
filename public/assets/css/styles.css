@@ -1,3 +1,9 @@
-h1 {
-    color: green;
+:root {
+ --fc-event-bg-color: #b5cc18;
+
 }
+
+/* .fc-h-event, .fc-day-grid-event, .fc-event, .fc-start, .fc-end, .fc-content, .fc-title, .fc-event-container {
+    background-color: var(--fc-event-bg-color);
+    border: 1px solid var(--fc-event-bg-color);
+} */

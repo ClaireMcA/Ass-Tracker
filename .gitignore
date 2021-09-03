@@ -1,3 +1,4 @@
 config.php
 db.sql
-public/register.php
+config-remote.php
+/node_modules

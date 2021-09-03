@@ -1,5 +1,7 @@
 <?php 
     
+    require "login-check.php";
+
     if (isset($_POST['submit'])) {
 
         require "../config.php"; 
@@ -39,32 +41,43 @@
         }
     }
 
-?>
 
 
-<?php include "templates/header.php"; ?>  
 
-<?php if (isset($_POST['submit']) && $statement) { ?>
-    <p>Assignment successfully added.</p>
+include "templates/header.php";
+
+if (isset($_POST['submit']) && $statement) { ?>
+    <div class = "ui form success">
+        <p class="ui sucess message">Assignment successfully added.</p>
+        <?php $_POST['submit'] = ""; ?>
+    </div>
 <?php } ?>
 
-<form method="post">
-    <label for="subjectname">Subject</label> 
-    <input type="text" name="subjectname" id="subjectname"> 
+<h2 class="ui dividing header">Add a New Assignment</h2>
 
-    <label for="assignmentname">Assignment Name</label> 
-    <input type="text" name="assignmentname" id="assignmentname"> 
-
-    <label for="duedate">Due Date</label> 
-    <input type="date" name="duedate" id="duedate"> 
-
-    <label for="weighting">Weighting</label> 
-    <input type="text" name="weighting" id="weighting"> 
-
-    <label for="completed">Completion</label>
-    <input type="text" name="completed" id="completed"> 
-
-    <input type="submit" name="submit" value="Submit">
+<form class= "ui form" method="post">
+    <div class= "six wide field">
+        <label for="subjectname">Subject</label> 
+        <input type="text" name="subjectname" id="subjectname"> 
+    </div>
+    <div class= "six wide field">
+        <label for="assignmentname">Assignment Name</label> 
+        <input type="text" name="assignmentname" id="assignmentname"> 
+    </div>
+    <div class= "six wide field">
+        <label for="duedate">Due Date</label> 
+        <input type="date" name="duedate" id="duedate"> 
+    </div>
+    <div class= "six wide field">
+        <label for="weighting">Weighting</label> 
+        <input type="text" name="weighting" id="weighting"> 
+    </div>
+    <div class= "six wide field">
+        <label for="completed">Completion</label>
+        <input type="text" name="completed" id="completed"> 
+    </div>
+    <a class="ui button" href="index.php">Cancel</a>
+    <input class= "ui olive button" type="submit" name="submit" value="Submit">
 </form>
 
 
