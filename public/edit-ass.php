@@ -114,12 +114,8 @@
             <input type="text" name="weighting" id="weighting" value="<?php echo $assignments['weighting']; ?>"> 
         </div>
         <div class= "six wide field">
-            <label for="completed">Completion</label>
+            <label for="completed">How Complete?</label>
             <input type="text" name="completed" id="completed" value="<?php echo $assignments['completed']; ?>"> 
-        </div>
-        <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" name = "completed">
-            <label>Completed</label>
         </div>
         <a class="ui button" href="event-page.php?id=<?php echo $assignments['id'];?>">Cancel</a>
         <input class= "ui olive button" type="submit" name="submit" value="Save">

@@ -26,8 +26,8 @@
                 <i class="user icon"></i>
                 <?php echo htmlspecialchars($_SESSION["username"]); ?>
             </h3>
-            <a class="ui ey button" href="reset-user.php">
-                Change Username
+            <a class="ui disabled button" href="">
+                Your Username
             </a>
         </div>
 

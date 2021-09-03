@@ -73,7 +73,7 @@ if (isset($_POST['submit']) && $statement) { ?>
         <input type="text" name="weighting" id="weighting"> 
     </div>
     <div class= "six wide field">
-        <label for="completed">Completion</label>
+        <label for="completed">How Complete?</label>
         <input type="text" name="completed" id="completed"> 
     </div>
     <a class="ui button" href="index.php">Cancel</a>

@@ -42,46 +42,6 @@
     }
     
 
-
-
-    // run when submit button is clicked
-    // if (isset($_POST['submit'])) {
-    //     try {
-
-    //         $connection = new PDO($dsn, $username, $password, $options);  
-
-    //         //grab elements from form and set as varaible
-    //         $work =[
-    //             "id"         => $_POST['id'],
-    //             "artistname" => $_POST['artistname'],
-    //             "worktitle"  => $_POST['worktitle'],
-    //             "workdate"   => $_POST['workdate'],
-    //             "worktype"   => $_POST['worktype'],
-    //             "date"   => $_POST['date'],
-    //         ];
-        
-    //         // create SQL statement
-    //         $sql = "UPDATE `works` 
-    //                 SET id = :id, 
-    //                     artistname = :artistname, 
-    //                     worktitle = :worktitle, 
-    //                     workdate = :workdate, 
-    //                     worktype = :worktype, 
-    //                     date = :date('l jS \of F Y h:i:s A') 
-    //                 WHERE id = :id";
-        
-    //         //prepare sql statement
-    //         $statement = $connection->prepare($sql);
-        
-    //         //execute sql statement
-    //         $statement->execute($work);
-
-    //     } catch(PDOException $error) {
-
-    //         echo $sql . "<br>" . $error->getMessage();
-            
-    //     }
-    // }
 ?>
 
 <?php
@@ -124,11 +84,28 @@
 <?php include "templates/header.php"; ?>
 
 
-<h2 class="ui header dividing">My Assignment</h2>
-<p>Assignment: <?php echo $assignment['assignmentname']; ?></p>
-<p>Subject: <?php echo $assignment['subjectname']; ?></p>
-<p>Due Date: <?php echo date("D, dS F y", strtotime($assignment['duedate'])); ?></p>
-<p><a class="ui olive button" name="edit-btn" href="edit-ass.php?id=<?php echo $assignment['id']?>">Edit</a></p>
+<h2 class="ui header dividing"><?php echo $assignment['assignmentname']; ?></h2>
+
+
+<div class="ui basic label">
+    <h3>Subject: <?php echo $assignment['subjectname']; ?></h3>
+</div>
+<br>
+<div class="ui basic label">
+    <h3>Due Date: <?php echo date("D, dS F y", strtotime($assignment['duedate'])); ?></h3>
+</div>
+<br>
+<div class="ui basic label">
+    <h4>Weighting: <?php echo $assignment['weighting']; ?></h4>
+</div>
+<br>
+<div class="ui basic label">
+    <h4>How Complete: <?php echo $assignment['completed']; ?></h4>
+</div>
+
+
+    <h1><a class="ui olive button" name="edit-btn" href="edit-ass.php?id=<?php echo $assignment['id']?>">Edit</a></h1>
+
 <a onClick = "return confirm('Do you really want to delete this Assignment?');"
     class = "ui red simple button" 
     name = "delete-btn" 
@@ -137,7 +114,8 @@
 </a>
 
 
-<!-- href="< echo $_SERVER['PHP_SELF'] . "?id=" . $assignment['id']; ?>" -->
+
+
 
 <?php   
     include "templates/footer.php";
